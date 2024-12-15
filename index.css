@@ -1,0 +1,186 @@
+.attribution { 
+  font-size: 11px; 
+  text-align: center; 
+}
+.attribution a { 
+  color: hsl(228, 45%, 44%); 
+}
+:root {
+  --Green200: hsl(148, 38%, 91%);
+  --Green600: hsl(169, 82%, 27%);
+  --Red: hsl(0, 66%, 54%);
+  --White: hsl(0, 0%, 100%);
+  --Grey500: hsl(186, 15%, 59%);
+  --Grey900: hsl(187, 24%, 22%);
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+input, label {
+  cursor: pointer;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  min-height: 100vh;
+  font-family: "Karla", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  position: relative;
+  background-color: var(--Green200);
+}
+span {
+  color: var(--Green600);
+}
+.card {
+  background-color: var(--White);
+  width: 90%;
+  margin: 10% auto 0 auto;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  color: var(--Grey900);
+}
+h1 {
+  font-weight: 700;
+  font-size: 1.8rem;
+  letter-spacing: 0;
+  margin-bottom: 1rem;
+}
+label[for='first-name'],
+label[for='last-name'], 
+label[for='email'],
+label[for='message']
+{
+  display: block;
+  margin: 0.5rem 0; 
+  font-size: 0.85rem;
+}
+input[type='text'],
+input[type='email']
+ {
+  display: block;
+  padding: 0.6rem;
+  width: 100%;
+  border-radius: 0.5rem;
+  border: 1px solid var(--Grey500);
+  margin-bottom: 0.3rem;
+}
+input:focus {
+  border: 1px solid var(--Green600);
+  outline: none;
+}
+.error-message {
+  color: var(--Red);
+  font-size: 0.75rem;
+}
+.f-name-error,
+.l-name-error,
+ .em-error,
+ .query-error,
+ .message-error,
+ .consent-error {
+  display: none;
+}
+.query {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin: 1rem 0;
+}
+.query > p {
+  font-size: 0.85rem;
+}
+.query-type {
+  display: grid;
+  gap: 1rem;
+}
+.query-type p {
+  border: 1px solid var(--Grey500);
+  border-radius: 0.5rem;
+  padding: 0.7rem 1.5rem;
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  cursor: pointer;
+  
+}
+textarea {
+  width: 100%;
+  border: 1px solid var(--Grey500);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-bottom: 0.3rem;
+}
+textarea:focus {
+  border: 2px solid var(--Green600);
+  outline: none;
+}
+.checkbox {
+  display: flex;
+  gap: 1.2rem;
+  margin: 1.2rem 0 0.3rem 0;
+}
+.checkbox label {
+  font-size: 0.85rem;
+}
+button {
+  width: 100%;
+  padding: 0.75rem 0.5rem;
+  border-radius: 0.3rem;
+  border: 1px solid var(--Grey500);
+  color: var(--White);
+  background-color: var(--Green600);
+  margin-top: 1.2rem;
+  cursor: pointer;
+  font-weight: 700;
+}
+button:hover {
+  background: hsl(170, 71%, 19%);
+}
+.success--message {
+  background-color: var(--Grey900);
+  color: var(--White);
+  padding: 1rem;
+  width: 80%;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  position: absolute;
+  top: 0.5rem;
+  display: none;
+}
+.success--header {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+.success--header h2 {
+  font-size: 1rem;
+  font-weight: 700;
+}
+.success--message p {
+  font-size: 0.85rem;
+}
+@media screen and (min-width: 580px) {
+  .card {
+    margin: 6% auto auto;
+    width: 35rem;
+    padding: 2rem;
+  }
+  .query-type {
+    grid-template-columns: 1fr 1fr;
+  }
+  .name-field {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  .success--message {
+    width: 24rem;
+    margin-left: 3.5rem;
+  }
+}
